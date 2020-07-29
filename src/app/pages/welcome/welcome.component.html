@@ -1,0 +1,33 @@
+
+  <nz-table nzBordered nzTableLayout="fixed" #basicTable [nzData]="filmDate">
+   <thead>
+   <tr>
+     <th nzWidth="15px">编号</th>
+     <th nzWidth="30px">名称</th>
+     <th nzWidth="15px">价格</th>
+     <th nzWidth="30px">导演</th>
+     <th nzWidth="50px">主演</th>
+     <th nzWidth="15px">语言</th>
+     <th nzWidth="100px">简介</th>
+   </tr>
+   </thead>
+   <tbody>
+   <tr *ngFor="let data of basicTable.data">
+<!--     <td nzEllipsis>123456</td>-->
+<!--     <td nzEllipsis>肖申克的救赎</td>-->
+<!--     <td nzEllipsis>不要元</td>-->
+<!--     <td nzEllipsis>川神</td>-->
+<!--     <td nzEllipsis>司胸/龙胸/豪帅</td>-->
+<!--     <td nzEllipsis>马拉D大语</td>-->
+<!--     <td nzEllipsis ngbTooltip>豪帅与司胸与文胸蹲局子，打黑工，然后文胸蹲了20年逃出来的了，司胸蹲了40年，豪帅蹲到老，放出去就自杀了。</td>-->
+     <td nzEllipsis>{{data.filmId}}</td>
+     <td nzEllipsis>{{data.filmName}}</td>
+     <td nzEllipsis>{{data.filmPrice}}元</td>
+     <td nzEllipsis>{{data.filmDirector}}</td>
+     <td nzEllipsis>{{data.filmActor}}</td>
+     <td nzEllipsis>{{data.filmLunguage}}</td>
+     <td nzEllipsis ngbTooltip>{{data.filmIntroduce}}</td>
+
+   </tr>
+   </tbody>
+  </nz-table>
